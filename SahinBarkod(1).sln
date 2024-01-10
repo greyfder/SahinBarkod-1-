@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SahinBarkod(1)", "SahinBarkod(1)\SahinBarkod(1).csproj", "{9D3BEBA6-E256-4DBD-A306-E2A20EA44BAB}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "BarkodluSatisSahinSetup", "BarkodluSatisSahinSetup\BarkodluSatisSahinSetup.vdproj", "{66A10E20-7E6D-4CCA-8A66-BC64268FA257}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lisans", "Lisans\Lisans.csproj", "{797A3735-774E-4539-9D93-8EE64F09F8D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D3BEBA6-E256-4DBD-A306-E2A20EA44BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D3BEBA6-E256-4DBD-A306-E2A20EA44BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D3BEBA6-E256-4DBD-A306-E2A20EA44BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D3BEBA6-E256-4DBD-A306-E2A20EA44BAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66A10E20-7E6D-4CCA-8A66-BC64268FA257}.Debug|Any CPU.ActiveCfg = Debug
+		{66A10E20-7E6D-4CCA-8A66-BC64268FA257}.Release|Any CPU.ActiveCfg = Release
+		{797A3735-774E-4539-9D93-8EE64F09F8D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{797A3735-774E-4539-9D93-8EE64F09F8D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{797A3735-774E-4539-9D93-8EE64F09F8D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{797A3735-774E-4539-9D93-8EE64F09F8D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1AA66A0E-EB0E-4B99-985B-8B1E148DD9C6}
+	EndGlobalSection
+EndGlobal

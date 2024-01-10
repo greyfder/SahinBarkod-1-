@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Barkodlu Satis Sahin\SahinBarkod(1).exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E8C2F0C7-7C8B-4212-B87A-C607D0C60C14}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>SahinBarkod(1)</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>SahinBarkod_1_</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework" />
+    <Reference Include="Lisans">
+      <HintPath>lib\Lisans.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <HintPath>lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core">
+      <HintPath>lib\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms">
+      <HintPath>lib\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Barkod.cs" />
+    <Compile Include="CokluB.cs" />
+    <Compile Include="cokurun_Result.cs" />
+    <Compile Include="fAyarlar.cs" />
+    <Compile Include="fBaslangic.cs" />
+    <Compile Include="fdeneme.cs" />
+    <Compile Include="fDetayGöster.cs" />
+    <Compile Include="fFiyatDegistir.cs" />
+    <Compile Include="fFiyatGuncelle.cs" />
+    <Compile Include="fGelirGider.cs" />
+    <Compile Include="fHizliFis.cs" />
+    <Compile Include="fHızlıButonUrunEkle.cs" />
+    <Compile Include="fLisans.cs" />
+    <Compile Include="fLogin.cs" />
+    <Compile Include="fMiktarDegistir.cs" />
+    <Compile Include="fnakitkart.cs" />
+    <Compile Include="Form1.cs" />
+    <Compile Include="fRapor.cs" />
+    <Compile Include="fRaporEkle.cs" />
+    <Compile Include="fStok.cs" />
+    <Compile Include="fUrunGiris.cs" />
+    <Compile Include="fUrunGrubuIslemleri.cs" />
+    <Compile Include="HızlıUrun.cs" />
+    <Compile Include="islem.cs" />
+    <Compile Include="islemler.cs" />
+    <Compile Include="islemOzet.cs" />
+    <Compile Include="Kontrol.cs" />
+    <Compile Include="Kullanici.cs" />
+    <Compile Include="Barkod1Entities.cs" />
+    <Compile Include="Nesnelerim.cs" />
+    <Compile Include="lstandart.cs" />
+    <Compile Include="bstandart.cs" />
+    <Compile Include="tstandart.cs" />
+    <Compile Include="tnumeric.cs" />
+    <Compile Include="gridozel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Raporlar.cs" />
+    <Compile Include="Sabit.cs" />
+    <Compile Include="Satisid.cs" />
+    <Compile Include="Sbt.cs" />
+    <Compile Include="StokHareket.cs" />
+    <Compile Include="stok_Result.cs" />
+    <Compile Include="Terazi.cs" />
+    <Compile Include="Urun.cs" />
+    <Compile Include="UrunGrup.cs" />
+    <Compile Include="Yazdir.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="SqlServerTypes\Utilities.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="fAyarlar.resx" />
+    <EmbeddedResource Include="fBaslangic.resx" />
+    <EmbeddedResource Include="fdeneme.resx" />
+    <EmbeddedResource Include="fDetayGöster.resx" />
+    <EmbeddedResource Include="fFiyatDegistir.resx" />
+    <EmbeddedResource Include="fFiyatGuncelle.resx" />
+    <EmbeddedResource Include="fGelirGider.resx" />
+    <EmbeddedResource Include="fHızlıButonUrunEkle.resx" />
+    <EmbeddedResource Include="fHizliFis.resx" />
+    <EmbeddedResource Include="fLisans.resx" />
+    <EmbeddedResource Include="fLogin.resx" />
+    <EmbeddedResource Include="fMiktarDegistir.resx" />
+    <EmbeddedResource Include="fnakitkart.resx" />
+    <EmbeddedResource Include="Form1.resx" />
+    <EmbeddedResource Include="fRapor.resx" />
+    <EmbeddedResource Include="fRaporEkle.resx" />
+    <EmbeddedResource Include="fStok.resx" />
+    <EmbeddedResource Include="fUrunGiris.resx" />
+    <EmbeddedResource Include="fUrunGrubuIslemleri.resx" />
+    <EmbeddedResource Include="Model1.csdl" />
+    <EmbeddedResource Include="Model1.msl" />
+    <EmbeddedResource Include="Model1.ssdl" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="SahinBarkod(1)\exe.licenses" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Barkod1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Urun">
+    <Key>
+      <PropertyRef Name="Urunid" />
+    </Key>
+    <Property Name="Urunid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Barkod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UrunAd" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Acıklama" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UrunGrup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AlisFiyat" Type="Double" />
+    <Property Name="SatisFiyat" Type="Double" />
+    <Property Name="KdvOrani" Type="Int32" />
+    <Property Name="KdvTutari" Type="Double" />
+    <Property Name="Birim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Miktar" Type="Double" />
+    <Property Name="Tarih" Type="DateTime" Precision="3" />
+    <Property Name="Kullanci" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SatisFiyat2" Type="Double" />
+    <Property Name="SatisFiyat3" Type="Double" />
+    <Property Name="SatisFiyat4" Type="Double" />
+    <Property Name="SatisFiyat5" Type="Double" />
+    <Property Name="Onay" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="Barkod1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Urun" EntityType="Self.Urun" />
+    <EntitySet Name="Terazi" EntityType="Barkod1Model.Terazi" />
+    <EntitySet Name="Satisid" EntityType="Barkod1Model.Satisid" />
+    <EntitySet Name="islem" EntityType="Barkod1Model.islem" />
+    <EntitySet Name="islemOzet" EntityType="Barkod1Model.islemOzet" />
+    <EntitySet Name="UrunGrup" EntityType="Barkod1Model.UrunGrup" />
+    <EntitySet Name="Barkod" EntityType="Barkod1Model.Barkod" />
+    <EntitySet Name="StokHareket" EntityType="Barkod1Model.StokHareket" />
+    <FunctionImport Name="cokurun" ReturnType="Collection(Barkod1Model.cokurun_Result)" />
+    <FunctionImport Name="stok" ReturnType="Collection(Barkod1Model.stok_Result)" />
+    <EntitySet Name="CokluB" EntityType="Barkod1Model.CokluB" />
+    <EntitySet Name="Sabit" EntityType="Barkod1Model.Sabit" />
+    <EntitySet Name="Kullanici" EntityType="Barkod1Model.Kullanici" />
+    <EntitySet Name="HızlıUrun" EntityType="Barkod1Model.HızlıUrun" />
+    <EntitySet Name="Sbt" EntityType="Barkod1Model.Sbt" />
+  </EntityContainer>
+  <EntityType Name="Terazi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TeraziOnEk" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Satisid">
+    <Key>
+      <PropertyRef Name="Satisid1" />
+    </Key>
+    <Property Name="Satisid1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="islemno" Type="Int32" />
+    <Property Name="Urunad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Barkod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Urungrup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Birim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Alisfiyat" Type="Double" />
+    <Property Name="Satisfiyat" Type="Double" />
+    <Property Name="Miktar" Type="Double" />
+    <Property Name="Toplam" Type="Double" />
+    <Property Name="Kdvtutari" Type="Double" />
+    <Property Name="Odemesekli" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="İade" Type="Boolean" />
+    <Property Name="Tarih" Type="DateTime" Precision="3" />
+    <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Satisfiyat2" Type="Double" />
+    <Property Name="Satisfiyat3" Type="Double" />
+    <Property Name="Satisfiyat4" Type="Double" />
+    <Property Name="Satisfiyat5" Type="Double" />
+  </EntityType>
+  <EntityType Name="islem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="islemno" Type="Int32" />
+  </EntityType>
+  <EntityType Name="islemOzet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="İslemNo" Type="Int32" />
+    <Property Name="İade" Type="Boolean" />
+    <Property Name="OdemeSekli" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Nakit" Type="Double" />
+    <Property Name="Kart" Type="Double" />
+    <Property Name="Gelir" Type="Boolean" />
+    <Property Name="Gider" Type="Boolean" />
+    <Property Name="AlısFiyatToplam" Type="Double" />
+    <Property Name="Acıklama" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Tarih" Type="DateTime" Precision="3" />
+    <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UrunGrup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UrunGrupAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Barkod">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Barkodno" Type="Int32" />
+  </EntityType>
+  <EntityType Name="StokHareket">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Barkod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UrunAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Birim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Miktar" Type="Double" />
+    <Property Name="UrunGrup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tarih" Type="DateTime" Precision="3" />
+  </EntityType>
+  <ComplexType Name="cokurun_Result">
+    <Property Type="Int32" Name="Urunid" Nullable="false" />
+    <Property Type="String" Name="Barkod" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="UrunAd" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Acıklama" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="UrunGrup" Nullable="true" MaxLength="50" />
+    <Property Type="Double" Name="AlisFiyat" Nullable="true" />
+    <Property Type="Double" Name="SatisFiyat" Nullable="true" />
+    <Property Type="Int32" Name="KdvOrani" Nullable="true" />
+    <Property Type="Double" Name="KdvTutari" Nullable="true" />
+    <Property Type="String" Name="Birim" Nullable="true" MaxLength="50" />
+    <Property Type="Double" Name="Miktar" Nullable="true" />
+    <Property Type="DateTime" Name="Tarih" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Kullanci" Nullable="true" MaxLength="50" />
+    <Property Type="Double" Name="SatisFiyat2" Nullable="true" />
+    <Property Type="Double" Name="SatisFiyat3" Nullable="true" />
+    <Property Type="Double" Name="SatisFiyat4" Nullable="true" />
+    <Property Type="Double" Name="SatisFiyat5" Nullable="true" />
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Barkod1" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Urunid1" Nullable="true" />
+    <Property Type="Int32" Name="cokluid" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="stok_Result">
+    <Property Type="String" Name="Barkod" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="UrunAd" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="UrunGrup" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Birim" Nullable="true" MaxLength="50" />
+    <Property Type="Double" Name="SatisFiyat" Nullable="true" />
+    <Property Type="Double" Name="Miktar" Nullable="true" />
+    <Property Type="DateTime" Name="Tarih" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Kullanci" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="CokluB">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Barkod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Urunid" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Sabit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KartKomisyon" Type="Int32" />
+    <Property Name="Yazici" Type="Boolean" />
+    <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Unvan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Adres" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EPosta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Kullanici">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="EPosta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Satis" Type="Boolean" />
+    <Property Name="Rapor" Type="Boolean" />
+    <Property Name="Stok" Type="Boolean" />
+    <Property Name="UrunGiris" Type="Boolean" />
+    <Property Name="Ayarlar" Type="Boolean" />
+    <Property Name="FiyatGuncelle" Type="Boolean" />
+    <Property Name="Yedekleme" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="HızlıUrun">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Barkod" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UrunAd" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Fiyat" Type="Double" />
+    <Property Name="Resim" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Resim2" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Sbt">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Kart" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Yazici" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>
